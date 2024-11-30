@@ -2,20 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "SuiGeneris";
+  src: url("./fonts/SuiGeneris.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat.ttf") format("truetype");
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.shine-effect {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  background-size: 200%;
+  animation: shine 1s ease-in-out; /* Slow and smooth */
 }
+
+.truncate-webkit {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Set the number of lines */
+  line-clamp: 2; /* Set the number of lines for compatibility */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Add this in your global CSS to hide scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+

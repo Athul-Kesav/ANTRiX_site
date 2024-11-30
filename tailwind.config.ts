@@ -12,7 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        suiGeneris: ['Sui Generis', 'sans-serif'], // Add your custom font
+        montserrat: ['Montserrat', 'sans-serif'], // Add your custom font
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 } satisfies Config;
