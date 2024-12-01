@@ -29,6 +29,11 @@ export function GET() {
                 desc: "Sed do eiusmod tempor incididunt. Consectetur adipiscing elit. Consectetur adipiscing elit. Consectetur adipiscing elit.",
                 refer: "https://www.google.com"
             },
+            {
+                img: "/sample1.png",
+                desc: "Sed do eiusmod tempor incididunt. Consectetur adipiscing elit. Consectetur adipiscing elit. Consectetur adipiscing elit.",
+                refer: "https://www.google.com"
+            },
             
 
         ];

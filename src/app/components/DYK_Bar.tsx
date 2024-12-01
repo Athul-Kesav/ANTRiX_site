@@ -1,4 +1,3 @@
-// DYK_Bar.tsx
 "use client"
 import { useEffect, useState } from "react";
 import DYK_Card from "./DYK_Card";
@@ -36,10 +35,15 @@ export default function DYK_Bar() {
   }
 
   return (
-    <div className="relative">
-      <div className="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-[#011627]">
+    <div className="relative h-full w-full rounded-xl ">
+      <div
+        className="flex space-x-4 overflow-x-auto p-2 bg-[#011627] scrollbar-hide rounded-xl"
+        style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }} // Ensures no wrapping
+      >
         {items.map((item, index) => (
-          <DYK_Card key={index} img={item.img} desc={item.desc} refer={item.refer} />
+          <div key={index} className="shrink-0"> {/* Fixed width */}
+            <DYK_Card img={item.img} desc={item.desc} refer={item.refer} />
+          </div>
         ))}
       </div>
     </div>

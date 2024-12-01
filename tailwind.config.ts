@@ -15,6 +15,8 @@ export default {
       fontFamily: {
         suiGeneris: ['Sui Generis', 'sans-serif'], // Add your custom font
         montserrat: ['Montserrat', 'sans-serif'], // Add your custom font
+        milker: ['Milker', 'sans-serif'], // Add your custom font
+        yesevaOne: ['Yeseva One', 'sans-serif'], // Add your custom font
       },
     },
   },
