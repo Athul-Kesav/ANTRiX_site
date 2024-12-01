@@ -10,7 +10,7 @@ interface DYKCardProps {
 export default function DYK_Card({ img, desc, refer }: DYKCardProps) {
   return (
     <div className="flex grow shrink-0">
-      <div className="p-1 grid grid-cols-2 w-full h-fit max-w-[200px] rounded-md shadow-lg bg-[#E7F5FF]">
+      <div className="m-2 p-2 grid grid-cols-2 w-full h-fit max-w-[200px] rounded-md shadow-lg bg-[#E7F5FF]">
         {/* Left Image Section */}
         <div className="relative h-full">
           <Image

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import DYK_Card from "./DYK_Card";
 import axios from "axios";
 import { StaticImageData } from "next/image";
+import DYKLoader from "./DYKLoader";
 
 interface DYKItem {
   img: string | StaticImageData; // URL of the image
@@ -31,13 +32,15 @@ export default function DYK_Bar() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Loader while data is fetched
+    return <div className="h-full w-full">
+      <DYKLoader/>
+    </div>; // Loader while data is fetched
   }
 
   return (
-    <div className="relative h-full w-full rounded-xl ">
+    <div className="relative h-full w-full rounded-xl">
       <div
-        className="flex space-x-4 overflow-x-auto p-2 bg-[#011627] scrollbar-hide rounded-xl"
+        className="flex space-x-4 overflow-x-auto p- bg-[#011627] scrollbar-hide rounded-xl"
         style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }} // Ensures no wrapping
       >
         {items.map((item, index) => (

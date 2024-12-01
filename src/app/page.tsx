@@ -20,7 +20,7 @@ export default function Home() {
           </div>
 
           {/* Top Section */}
-          <div className="col-span-5 row-span-1 h-full w-full bg-red-300">
+          <div className="col-span-5 row-span-1 h-full w-full">
             <DYK_Bar />
           </div>
 
