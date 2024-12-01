@@ -24,6 +24,16 @@
   src: url("./fonts/YesevaOne-Regular.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "Jupiteroid";
+  src: url("./fonts/Jupiteroid-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Moonrising";
+  src: url("./fonts/Moonrising.otf") format("otf");
+}
+
 
 @keyframes shine {
   0% {
@@ -32,17 +42,6 @@
   100% {
     background-position: 200%;
   }
-}
-
-.shine-effect {
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(0, 0, 0, 0.4),
-    transparent
-  );
-  background-size: 200%;
-  animation: shine 1s ease-in-out; /* Slow and smooth */
 }
 
 .truncate-webkit {
@@ -126,6 +125,30 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .nav-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px; /* Thin underline */
+    background: #e7f5ff; /* Matches text color */
+    transition: width 0.3s ease; /* Smooth transition */
+  }
+
+  .nav-item:hover::after {
+    width: 100%; /* Expand underline */
   }
 }
 

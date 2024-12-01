@@ -55,7 +55,9 @@ export default {
   			suiGeneris: ['Sui Generis', 'sans-serif'],
   			montserrat: ['Montserrat', 'sans-serif'],
   			milker: ['Milker', 'sans-serif'],
-  			yesevaOne: ['Yeseva One', 'sans-serif']
+  			yesevaOne: ['Yeseva One', 'sans-serif'],
+			jupiteroid: ['Jupiteroid', 'sans-serif'],
+			moonRising: ['Moonrising', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
