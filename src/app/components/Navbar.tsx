@@ -23,7 +23,7 @@ function Navbar() {
     <div className="grid h-full w-full left-0 text-white grid-rows-4 z-10">
       {/* Top Section with Image */}
       <div className="row-span-1 h-full w-full rounded-lg flex items-start">
-        <Image src={img1} alt="Nav Img" className="relative w-20" />
+        <Image src={img1} alt="Nav Img" className="relative w-20 h-auto hover:w-24 transition-all" />
       </div>
 
       {/* Navbar Section */}

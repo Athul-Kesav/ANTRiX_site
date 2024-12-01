@@ -58,6 +58,7 @@ export default {
   			yesevaOne: ['Yeseva One', 'sans-serif'],
 			jupiteroid: ['Jupiteroid', 'sans-serif'],
 			moonRising: ['Moonrising', 'sans-serif'],
+			mixedFeelings: ['mixedfeelings', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

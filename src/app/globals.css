@@ -34,6 +34,11 @@
   src: url("./fonts/Moonrising.otf") format("otf");
 }
 
+@font-face {
+  font-family: "mixedfeelings";
+  src: url("./fonts/mixedfeelings.ttf") format("ttf");
+}
+
 
 @keyframes shine {
   0% {
