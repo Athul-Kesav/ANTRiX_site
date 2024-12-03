@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           {/* Middle Sections */}
-          <div className="col-span-3 row-span-2  font-suiGeneris text-2xl">
+          <div className="col-span-2 row-span-2  font-suiGeneris text-xl">
             <div className="flex w-full justify-between">
               .recent events
               <button
@@ -51,23 +51,23 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="col-span-5 row-span-3 relative z-2">
+          <div className="col-span-6 row-span-3 relative z-2">
             <Image
               src={HeroImage}
               alt="Nav Img"
               layout="fill" /* Makes the image fill the parent div */
               objectFit="cover" /* Ensures the image covers the div without distortion */
               objectPosition="center"
-              className="rounded-lg" /* Optional: Add rounded corners or other styles */
+              className="rounded-2xl" /* Optional: Add rounded corners or other styles */
             />
           </div>
-          <div className="flex-col col-span-3 row-span-1 z-10 items-end">
+          <div className="flex-col col-span-2 row-span-1 z-10 items-end">
             <div className="bg-[#011627] h-10 w-full text-white items-center flex justify-center font-suiGeneris rounded-md my-4">
               Astro Updates
             </div>
             <div className="flex-col align-bottom">
-              <span className="font-moonRising text-3xl ">“The cosmos is within us. We are made of star-stuff."</span>
-              <span className="font-mixedFeelings text-4xl inline-flex">~ Carl Sagan</span>
+              <span className="font-moonRising text-2xl ">“The cosmos is within us. We are made of star-stuff."</span>
+              <span className="font-mixedFeelings text-2xl inline-flex">~ Carl Sagan</span>
             </div>
           </div>
         </div>

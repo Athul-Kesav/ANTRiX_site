@@ -1,9 +1,12 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import DYK_Card from "./DYK_Card";
 import axios from "axios";
 import { StaticImageData } from "next/image";
 import DYKLoader from "./DYKLoader";
+import Image from "next/image";
+import moreArrow from "../svgs/Line9.svg";
+import router from "next/navigation";
 
 interface DYKItem {
   img: string | StaticImageData; // URL of the image
@@ -32,22 +35,47 @@ export default function DYK_Bar() {
   }, []);
 
   if (loading) {
-    return <div className="h-full w-full">
-      <DYKLoader/>
-    </div>; // Loader while data is fetched
+    return (
+      <div className="h-full w-full">
+        <DYKLoader />
+      </div>
+    ); // Loader while data is fetched
   }
 
   return (
     <div className="relative h-full w-full rounded-xl">
       <div
-        className="flex space-x-4 overflow-x-auto bg-[#011627] scrollbar-hide rounded-xl justify-between px-2"
+        className="flex space-x-4 overflow-x-auto bg-[#011627] scrollbar-hide rounded-xl justify-between px-2 items-center align-middle"
         style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }} // Ensures no wrapping
       >
         {items.map((item, index) => (
-          <div key={index} className="shrink-0"> {/* Fixed width */}
+          <div key={index} className="shrink-0">
+            {" "}
+            {/* Fixed width */}
             <DYK_Card img={item.img} desc={item.desc} refer={item.refer} />
           </div>
         ))}
+        <div className="-rotate-90">
+          <button
+            type="button"
+            className="bg-[#011627] my-1 align-middle px-4 rounded-lg inline-flex items-center text-[#E7F5FF] hover:text-[#FF2323] hover:bg-[#E7F5FF]"
+            
+          >
+            <a
+              href="/dyk"
+              className="font-moonRising text-lg transition-all"
+            >
+              MORE
+            </a>
+            <Image
+              src={moreArrow}
+              alt="More Arrow"
+              width={20}
+              height={20}
+              className="mx-1"
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
