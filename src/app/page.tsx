@@ -5,11 +5,18 @@ import moreArrow from "./svgs/Line9.svg";
 import copyright from "./svgs/Group51.svg";
 
 import Image from "next/image";
+import HomeRecentEvents from "./components/HomeRecentEvents";
+import EventHomeCard from "./components/EventHomeCard";
+import DarkLightToggle from "./components/DarkLightToggle";
+import WavyImage from "./components/WavyImage";
 
 export default function Home() {
   return (
     <>
       <div className="h-screen bg-[#E7F5FF] p-[45px] relative">
+        <div className="absolute top-5 right-0 z-20 rotate-90">
+          <DarkLightToggle/>
+        </div>
         <div className="grid grid-cols-10 grid-rows-4 h-full gap-1 relative">
           <div className="grid col-span-2 row-span-5 grid-cols-3">
             {/* First Sidebar (Leftmost) */}
@@ -50,8 +57,13 @@ export default function Home() {
                 />
               </button>
             </div>
+            <div className=" h-full w-full flex items-center align-middle">
+              {/* <EventHomeCard title="asdasf" desc="adfvdsvsf" eventDate={new Date("2024-12-11")}/> */}
+              {/* <HomeRecentEvents /> */}
+            </div>
           </div>
           <div className="col-span-6 row-span-3 relative z-2">
+            
             <Image
               src={HeroImage}
               alt="Nav Img"
@@ -62,8 +74,8 @@ export default function Home() {
             />
           </div>
           <div className="flex-col col-span-2 row-span-1 z-10 items-end">
-            <div className="bg-[#011627] h-10 w-full text-white items-center flex justify-center font-suiGeneris rounded-md my-4">
-              Astro Updates
+            <div className="bg-[#011627] h-auto w-full text-white items-center flex justify-center font-montserrat leading-tight rounded-md my-4 text-center text-sm py-2">
+              National Institute of Technology <br/> Puducherry
             </div>
             <div className="flex-col align-bottom">
               <span className="font-moonRising text-2xl ">“The cosmos is within us. We are made of star-stuff."</span>

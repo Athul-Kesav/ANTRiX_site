@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+
 
 // Handler function for the API route
 export function GET() {

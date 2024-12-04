@@ -1,3 +1,5 @@
+import EventHomeCard from "../components/EventHomeCard";
+import HomeRecentEvents from "../components/HomeRecentEvents";
 import Navbar from "../components/Navbar";
 
 function page() {
@@ -10,6 +12,11 @@ function page() {
             <div className="col-span-1   flex ">
               <Navbar />
             </div>
+          </div>
+          <div className="col-span-4 h-full row-span-4">
+            <EventHomeCard title="ISRO NSpD'24" desc="Live stream of the space event" eventDate={new Date("2024-12-11")}/>
+            <EventHomeCard title="ISRO NSpD'24" desc="Live stream of the space event" eventDate={new Date("2024-12-11")}/>
+            <EventHomeCard title="ISRO NSpD'24" desc="Live stream of the space event" eventDate={new Date("2024-12-11")}/>
           </div>
         </div>
       </div>

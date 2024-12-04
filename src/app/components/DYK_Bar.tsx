@@ -61,10 +61,7 @@ export default function DYK_Bar() {
             className="bg-[#011627] my-1 align-middle px-4 rounded-lg inline-flex items-center text-[#E7F5FF] hover:text-[#FF2323] hover:bg-[#E7F5FF]"
             
           >
-            <a
-              href="/dyk"
-              className="font-moonRising text-lg transition-all"
-            >
+            <a href="/dyk" className="font-moonRising text-lg transition-all">
               MORE
             </a>
             <Image
