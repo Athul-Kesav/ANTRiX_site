@@ -9,7 +9,7 @@ export default function DYK_Bar() {
         <div className="h-full w-full flex">
             DYK Page
             <div className="w-56 h-screen bg-yellow-100">
-                <WavyImage/>
+                
             </div>
             
             

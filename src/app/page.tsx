@@ -20,14 +20,14 @@ export default function Home() {
         <div className="grid grid-cols-10 grid-rows-4 h-full gap-1 relative">
           <div className="grid col-span-2 row-span-5 grid-cols-3">
             {/* First Sidebar (Leftmost) */}
-            <div className="col-span-1   flex ">
+            <div className="col-span-1 flex ">
               <Navbar />
             </div>
 
             {/* Second Sidebar */}
             <div className="col-span-2  flex justify-center items-center z-0">
               <div className="text-[173px] font-bold font-milker tracking-wide transform -rotate-90 text-center text-[#011627]">
-                ANTR<span className="font-yesevaOne">i</span>X
+                ANTR{<span className="font-yesevaOne">i</span>}X
               </div>
             </div>
           </div>
@@ -62,8 +62,7 @@ export default function Home() {
               {/* <HomeRecentEvents /> */}
             </div>
           </div>
-          <div className="col-span-6 row-span-3 relative z-2">
-            
+          <div className="col-span-6 row-span-3 relative z-2 ml-3">
             <Image
               src={HeroImage}
               alt="Nav Img"
