@@ -73,7 +73,7 @@ export default function Home() {
             />
           </div>
           <div className="flex-col col-span-2 row-span-1 z-10 items-end">
-            <div className="bg-[#011627] h-auto w-full text-white items-center flex justify-center font-montserrat leading-tight rounded-md my-4 text-center text-sm py-2">
+            <div className="bg-[#011627] h-auto w-full text-white items-center flex justify-center font-jupiteroid leading-tight rounded-md my-4 text-center text-sm py-2">
               National Institute of Technology <br/> Puducherry
             </div>
             <div className="flex-col align-bottom">

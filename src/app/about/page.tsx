@@ -18,8 +18,8 @@ export default function () {
     github: "https://github.com/ASTRON-by-ANTRiX",
     instagram: "https://www.instagram.com/antrix_nitpy",
     whatsapp: "https://chat.whatsapp.com/FGWuJcEfPQbCFX4qU2TDcR",
-    linkedin: "https://www.linkedin.com/company/antrix-nitpy",
-    discord: "https://discord.gg/...",
+    linkedin: "https://www.linkedin.com/company/antrixnitpy/",
+    discord: "https://discord.gg/Rrqzd4Nb5A",
   }
   return (
     <div>

@@ -6,6 +6,12 @@ import img1 from "../svgs/Group49.svg";
 
 function Navbar() {
   const pathname = usePathname(); // Get the current route
+
+  // Function to navigate to the game page
+  const goGame = () => {
+    console.log("Game Page");
+    //window.location.href = "/game";
+  };
   
 
   // Define all navbar links
@@ -23,7 +29,7 @@ function Navbar() {
     <div className="grid h-full w-full left-0 text-white grid-rows-4 z-10">
       {/* Top Section with Image */}
       <div className="row-span-1 h-full w-full rounded-lg flex items-start">
-        <Image src={img1} alt="Nav Img" className="relative w-20 h-auto hover:w-24 transition-all" />
+        <Image src={img1} alt="Nav Img" className="relative w-20 h-auto hover:w-[5.2rem] transition-all cursor-pointer" onClick={goGame} />
       </div>
 
       {/* Navbar Section */}
