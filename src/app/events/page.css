@@ -1,26 +1,34 @@
+@keyframes grain {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.bg-grain-pattern {
+  background-image: url('/path-to-grain-texture.png');
+  background-size: cover;
+  animation: grain 3s steps(10) infinite;
+}
 
 
 .breathe-animation {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:first baseline;
+    align-items: end;
     /* Change the Background color of the entire screen */
     /* 'vw' is a viewport-width unit, 'vh' is a viewport-height unit. 1vw equals 1% of the width of the viewport, and 1vh equals 1% of the height of the viewport. This allows the font size to scale dynamically with the window size. */
-    height: "fill-available";
+    height: 100vh;
   }
   
-  .breathe-animation span {
+  .effectText {
     font-family: "Montserrat", sans-serif;
   
     /* The 'clamp()' function sets a flexible font size that will never go below a minimum value and never above a maximum value. The middle value is preferred, but it will shrink or grow based on the viewport dimensions. */
     /* Adjusts font size based on content width and viewport height */
-    font-size: clamp(10vw, 15vw, 40vh);
-  
-    /* Change this to set the text color */
-    color: #E7F5FF;
+    font-size: clamp(7vw, 15vw, 20vh);
   
     /* Center text horizontally */
-    text-align: center;
+    text-align: right;
   
     /* The 'animation' property applies the 'letter-breathe' keyframes to the element, making it animate over 3 seconds.'ease-in-out' makes the movement start and end slowly, and 'infinite' makes it repeat forever. */
     /* Controls the animation (3s is the duration) */
@@ -39,7 +47,7 @@
     /* At the midpoint (50%) of the animation, the font weight changes to 900. */
     50% {
       /* Ending weight; adjust the numbers according to your specific font */
-      font-variation-settings: "wght" 900;
+      font-variation-settings: "wght" 700;
     }
   }
   

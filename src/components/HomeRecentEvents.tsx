@@ -11,7 +11,6 @@ interface eventCard {
 
 export default function HomeRecentEvents() {
   const [items, setItems] = useState<eventCard[]>([]); // State to store the fetched items
-  const [loading, setLoading] = useState<boolean>(true);
 
   // Fetch data from the backend
   useEffect(() => {
@@ -19,10 +18,8 @@ export default function HomeRecentEvents() {
       try {
         const response = await axios.get("/api/eventDetails"); // Replace with your actual backend API
         setItems(response.data); // Assuming the backend returns an array of objects
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false);
       }
     };
 
