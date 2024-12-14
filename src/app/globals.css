@@ -6,6 +6,25 @@
 * {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #01162775;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #011627;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e7f5ff;
+}
+
+
 @font-face {
   font-family: "SuiGeneris";
   src: url("../fonts/SuiGeneris.otf") format("otf");
@@ -128,14 +147,7 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+
 
 @layer utilities {
   .nav-item {

@@ -1,6 +1,7 @@
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export default function () {
+  
   return (
     <div>
       <div className="h-screen bg-[#E7F5FF] p-[45px]">
@@ -13,7 +14,6 @@ export default function () {
           </div>
         </div>
       </div>
-      CONTACT US
     </div>
   );
 }

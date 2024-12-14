@@ -28,6 +28,47 @@ export function GET(){
           desc: "How AI is shaping the future",
           eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
         },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        {
+          title: "AI Innovators Meet'23",
+          desc: "How AI is shaping the future",
+          eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+        },
+        
       ];
       
       return Response.json(data);

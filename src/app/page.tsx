@@ -12,6 +12,8 @@ import WavyImage from "@/components/WavyImage";
 
 export default function Home() {
 
+
+
   return (
     <>
       <div className="h-screen box-border bg-[#E7F5FF] p-[45px] relative">
@@ -60,9 +62,10 @@ export default function Home() {
                 />
               </button>
             </div>
-            <div className=" h-full w-full flex items-center align-middle">
+            <div className=" h-full w-full flex items-center align-middle overflow-x-hidden">
               {/* <EventHomeCard title="asdasf" desc="adfvdsvsf" eventDate={new Date("2024-12-11")}/> */}
-              {/* <HomeRecentEvents /> */}
+              <HomeRecentEvents /> 
+
             </div>
           </div>
           <div className="col-span-6 row-span-3 relative z-2 ml-3">
