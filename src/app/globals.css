@@ -2,41 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 @font-face {
   font-family: "SuiGeneris";
-  src: url("./fonts/SuiGeneris.otf") format("otf");
+  src: url("../fonts/SuiGeneris.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./fonts/Montserrat.ttf") format("truetype");
+  src: url("../fonts/Montserrat.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Milker";
-  src: url("./fonts/Milker.otf") format("otf");
+  src: url("../fonts/Milker.otf") format("otf");
 }
 
 @font-face {
   font-family: "Yeseva One";
-  src: url("./fonts/YesevaOne-Regular.ttf") format("ttf");
+  src: url("../fonts/YesevaOne-Regular.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Jupiteroid";
-  src: url("./fonts/Jupiteroid-Light.ttf") format("ttf");
+  src: url("../fonts/Jupiteroid-Light.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Moonrising";
-  src: url("./fonts/Moonrising.otf") format("otf");
+  src: url("../fonts/Moonrising.otf") format("otf");
 }
 
 @font-face {
   font-family: "mixedfeelings";
-  src: url("./fonts/mixedfeelings.ttf") format("ttf");
+  src: url("../fonts/mixedfeelings.ttf") format("ttf");
 }
 
 

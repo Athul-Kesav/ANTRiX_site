@@ -1,19 +1,20 @@
-import DYK_Bar from "./components/DYK_Bar";
-import Navbar from "./components/Navbar";
-import HeroImage from "./images/Hero.jpg";
-import moreArrow from "./svgs/Line9.svg";
-import copyright from "./svgs/Group51.svg";
+import DYK_Bar from "@/components/DYK_Bar";
+import Navbar from "@/components/Navbar";
+import HeroImage from "@/images/Hero.jpg";
+import moreArrow from "@/svgs/Line9.svg";
+import copyright from "@/svgs/Group51.svg";
 
 import Image from "next/image";
-import HomeRecentEvents from "./components/HomeRecentEvents";
-import EventHomeCard from "./components/EventHomeCard";
-import DarkLightToggle from "./components/DarkLightToggle";
-import WavyImage from "./components/WavyImage";
+import HomeRecentEvents from "@/components/HomeRecentEvents";
+import EventHomeCard from "@/components/EventHomeCard";
+import DarkLightToggle from "@/components/DarkLightToggle";
+import WavyImage from "@/components/WavyImage";
 
 export default function Home() {
+
   return (
     <>
-      <div className="h-screen bg-[#E7F5FF] p-[45px] relative">
+      <div className="h-screen box-border bg-[#E7F5FF] p-[45px] relative">
         <div className="absolute top-5 right-0 z-20 rotate-90">
           <DarkLightToggle/>
         </div>
@@ -26,9 +27,11 @@ export default function Home() {
 
             {/* Second Sidebar */}
             <div className="col-span-2  flex justify-center items-center z-0">
+              
               <div className="text-[173px] font-bold font-milker tracking-wide transform -rotate-90 text-center text-[#011627]">
                 ANTR{<span className="font-yesevaOne">i</span>}X
               </div>
+              
             </div>
           </div>
 

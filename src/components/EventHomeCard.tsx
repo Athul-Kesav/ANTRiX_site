@@ -11,7 +11,7 @@ function EventHomeCard({ title, desc, eventDate }: eventCardType) {
 
   return (
     <>
-      <div className="m-4 p-4 w-auto h-auto relative md:pt-8 rounded-tr-lg rounded-bl-lg bg-gradient-to-r from-transparent to-[#d0e4f2]">
+      <div className="m-4 p-4 w-auto h-auto relative md:pt-8 rounded-tr-lg rounded-bl-lg bg-gradient-to-r from-transparent to-[#d0e4f2] z-0">
           <div className="left-0 top-0  leading-tight">
             <div className="text-[#011627] text-md font-normal font-suiGeneris leading-tight text-wrap flex md:text-3xl sm:2xl">
               {title}

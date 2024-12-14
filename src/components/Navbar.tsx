@@ -10,7 +10,7 @@ function Navbar() {
   // Function to navigate to the game page
   const goGame = () => {
     console.log("Game Page");
-    //window.location.href = "/game";
+    window.location.href = "/game";
   };
   
 
@@ -26,7 +26,7 @@ function Navbar() {
   const filteredLinks = navLinks.filter((link) => link.href !== pathname);
 
   return (
-    <div className="grid h-full w-full left-0 text-white grid-rows-4 z-10">
+    <div className="grid h-full w-full left-0 text-white grid-rows-4 z-50">
       {/* Top Section with Image */}
       <div className="row-span-1 h-full w-full rounded-lg flex items-start">
         <Image src={img1} alt="Nav Img" className="relative w-20 h-auto hover:w-[5.2rem] transition-all cursor-pointer" onClick={goGame} />
