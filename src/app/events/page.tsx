@@ -1,7 +1,7 @@
 "use client";
 
 import "./page.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import Navbar from "@/components/Navbar";
 import HorizontalScrollCarousel from "@/components/HorizontalScroll";
@@ -9,8 +9,34 @@ import HorizontalScrollCarousel from "@/components/HorizontalScroll";
 import spaceImg from "@/images/spaceImg.jpg";
 import noise from "@/images/noiseTex.png";
 import copyright from "@/svgs/Group51.svg";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+interface eventCard {
+  eventId: number;
+  image: string | StaticImageData;
+  title: string;
+  desc: string;
+  eventDate: Date;
+}
 
 export default function page() {
+  const [items, setItems] = useState<eventCard[]>([]); // State to store the fetched items
+  
+    // Fetch data from the backend
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get("/api/eventDetails"); // Replace with your actual backend API
+          setItems(response.data); // Assuming the backend returns an array of objects
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+  
+      fetchData();
+    }, []);
+    
   const handleScroll = () => {
     window.scrollBy({
       top: window.innerHeight, // Scrolls down by the viewport height
@@ -23,17 +49,13 @@ export default function page() {
       <div className="h-screen ">
         <div className="grid grid-cols-10 grid-rows-4 h-full gap-1">
           <div className="col-span-full row-span-4 h-screen w-full  flex breathe-animation relative overflow-clip">
-            <Image
-              src={noise}
-              alt="noise texture"
-              className="absolute z-10  mix-blend-difference opacity-75  contrast-125 object-cover h-full w-full"
-            />
+            
             <Image
               src={spaceImg}
               alt="space Image"
               className="absolute z-0 object-cover h-full w-full"
             />
-            <span className="z-20 absolute bottom-0 right-0 leading-0 tracking-tighter bg-[#e7f5ff] text-[#011627] px-2 effectText rounded-tl-2xl">
+            <span className="z-20 absolute bottom-0 right-0 leading-0 tracking-tighter bg-[#e7f5ff] text-[#011627] px-16 effectText rounded-tl-2xl">
               EVENTS
             </span>
             <span className="m-9 z-10 rotate-90 hover:scale-[200%] transition-transform cursor-pointer hover:rotate-0">
@@ -61,7 +83,7 @@ export default function page() {
         </div>
         <div className=" h-screen relative">
           <div className="absolute top-0 left-0 w-[10vw] h-[500vh] bg-gradient-to-r from-[#011627] via-[#e7f5ff15] to-transparent z-50" />
-          <HorizontalScrollCarousel />
+          <HorizontalScrollCarousel eventCards = {items}/>
           <h1 className="text-9xl absolute right-0 text-right uppercase font-milker leading-0 text-[#E7F5FF] h-screen bg-[#011627]">
             More EVENTS Coming Soon
             <div className="absolute bottom-11 right-1 z-[70] bg-[#E7F5FF] p-2 rounded-lg">

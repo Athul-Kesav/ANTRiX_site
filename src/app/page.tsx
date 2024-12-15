@@ -39,7 +39,7 @@ export default function Home() {
 
           {/* Middle Sections */}
           <div className="col-span-2 row-span-2  font-suiGeneris text-xl">
-            <div className="flex w-full justify-between">
+            <div className="flex w-full justify-between pb-2">
               .recent events
               <button
                 type="button"

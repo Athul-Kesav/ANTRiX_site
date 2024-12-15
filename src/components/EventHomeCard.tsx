@@ -11,13 +11,13 @@ function EventHomeCard({ title, desc, eventDate }: eventCardType) {
 
   return (
     <>
-      <div className="m-2 py-4 w-auto h-auto relative  rounded-tr-lg rounded-bl-lg bg-gradient-to-r from-transparent to-[#cde8fc] z-0">
+      <div className="m-2 py-4 px-2 w-auto h-auto relative  rounded-tr-lg rounded-bl-lg bg-gradient-to-r from-transparent to-[#cde8fc] z-0">
           <div className="left-0 top-0  leading-tight">
             <div className="text-[#011627] text-xs font-normal font-suiGeneris leading-tight text-wrap flex md:text-md">
               {title}
               <br />
             </div>
-            <div className="py-1 pb-2 text-[#011627] text-xs font-normal font-montserrat leading-tight text-wrap hidden md:block">
+            <div className="py-1 pb-2 text-[#011627] text-xs font-normal font-montserrat leading-tight tracking-tight text-nowrap overflow-hidden hidden md:block text-ellipsis line-clamp-2">
               {desc}
             </div>
         </div>

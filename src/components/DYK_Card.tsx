@@ -26,7 +26,7 @@ export default function DYK_Card({ img, desc, refer }: DYKCardProps) {
         <div className="grid grid-rows-3 px-2">
           {/* Top Two Rows: Text */}
           <div className="row-span-2 flex items-center text-sm text-[#011627] overflow-hidden text-wrap">
-            <p className="line-clamp-4 sm:line-clamp-4 md:line-clamp-6 w-fill leading-tight text-xs">
+            <p className="line-clamp-2 sm:line-clamp-4 md:line-clamp-6 w-fill leading-tight text-xs">
               {desc}
             </p>
           </div>
