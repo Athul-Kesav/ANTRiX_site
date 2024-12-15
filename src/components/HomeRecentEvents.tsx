@@ -1,12 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Link from 'next/link'
+
 import EventHomeCard from "./EventHomeCard";
 
 interface eventCard {
   title: string;
   desc: string;
   eventDate: Date;
+  eventId: number;
 }
 
 export default function HomeRecentEvents() {
@@ -33,7 +36,9 @@ export default function HomeRecentEvents() {
           <div key={index} className="shrink-0">
         {" "}
         {/* Fixed width */}
-        <EventHomeCard title={item.title} desc={item.desc} eventDate={item.eventDate} />
+        <Link href={`/events/${item.eventId}`}>
+          <EventHomeCard title={item.title} desc={item.desc} eventDate={item.eventDate} />
+        </Link>
           </div>
         ))}
       </div>

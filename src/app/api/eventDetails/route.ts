@@ -1,16 +1,24 @@
 import { parse } from 'date-fns';
+import { NextRequest, NextResponse } from 'next/server';
 
-export function GET() { 
+export function GET(req: NextRequest) { 
 
-  const data = [
+  const url = new URL(req.url);
+  const searchParams = url.searchParams;
+  const eventId = searchParams.get('eventId');
+  console.log(eventId);
+  
+  
+  const events = [
     { eventId : 1,
-      image: "/test.jpg",
+      image: "/Event1.webp",
       title: "ISRO NSpD'24",
-      desc: "Live stream of the space event. Live stream of the space event. Live stream of the space event. Live stream of the space event. Live stream of the space event. Live stream of the space event. Live stream of the space event. Live stream of the space event. ",
+      
+      desc: "Live stream of the space event. Live stream of the space event.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet.",
       eventDate: parse("03/12/2024", "dd/MM/yyyy", new Date()),
     },
     { eventId : 2,
-      image: "/test.jpg",
+      image: "/Event2.png",
       title: "Gibberish Tech Talk'24",
       desc: "Exploring the unknown with code",
       eventDate: parse("15/11/2024", "dd/MM/yyyy", new Date()),
@@ -84,5 +92,15 @@ export function GET() {
 
   ];
 
-  return Response.json(data);
+  if (eventId) {
+    const event = events.find(event => event.eventId === parseInt(eventId));
+    if (event) {
+      return NextResponse.json(event);
+    } else {
+      return NextResponse.json({ error: 'Event not found' }, { status: 404 });
+    }
+  }
+
+  return NextResponse.json(events);
 }
+

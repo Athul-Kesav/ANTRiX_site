@@ -33,11 +33,11 @@ const HorizontalScrollCarousel = ({ eventCards }: ScrollProps) => {
         <Image
           src={spaceShip}
           alt="space ship"
-          className="object-cover overflow-clip"
+          className="object-cover overflow-clip h-full w-full mix-blend-plus-darker saturate-150"
         />
-        <div className="absolute inset-0 h-[122vh] bg-gradient-to-b via-[#e7f5ff50] from-transparent to-[#e7f5ff] z-[0]" />
+        <div className="absolute inset-0 h-full bg-gradient-to-b via-[#e7f5ff50] from-transparent to-[#e7f5ff] z-0" />
       </div>
-      <div className="z-10 text-9xl flex h-screen w-full absolute items-center text-center flex-col uppercase font-milker leading-[6rem] text-[#011627] mt-40 tracking-tight mix-blend-overlay">
+      <div className="z-10 text-9xl flex h-screen w-full absolute items-center text-center flex-col uppercase font-milker leading-[6rem] text-[#011627] mt-40 tracking-tight mix-blend-multiply opacity-75">
         <span>
           Recent <br /> Events
         </span>
@@ -52,7 +52,8 @@ const HorizontalScrollCarousel = ({ eventCards }: ScrollProps) => {
 
               >
                 <MainEventCard
-                  eventId={index + 1}
+                  cardNo={index + 1}
+                  eventId={eventCard.eventId}
                   image={eventCard.image}
                   title={eventCard.title}
                   desc={eventCard.desc}
@@ -69,15 +70,15 @@ const HorizontalScrollCarousel = ({ eventCards }: ScrollProps) => {
           alt="events"
           objectFit="cover"
           objectPosition="center"
-          className="w-full h-full z-0 object-cover"
+          className="w-full h-full z-0 object-cover mix-blend-darken"
         />
       </div>
-      <div className="absolute bottom-0 right-0 bg-[#011627]  p-6 w-[66vw] rounded-tl-2xl">
+      <div className="absolute bottom-0 right-0 bg-[#e7f5ff]  p-6 w-[66vw] rounded-tl-2xl">
         <Image
           src={wnext}
           alt="wnext"
           objectFit="cover"
-          className="w-[30vw] z-30"
+          className="w-[30vw] z-30  fill-[#011627]"
         />
       </div>
     </section>

@@ -5,10 +5,10 @@ import moreArrow from "@/svgs/Line9.svg";
 import copyright from "@/svgs/Group51.svg";
 
 import Image from "next/image";
+import Link from 'next/link'
+
 import HomeRecentEvents from "@/components/HomeRecentEvents";
-import EventHomeCard from "@/components/EventHomeCard";
 import DarkLightToggle from "@/components/DarkLightToggle";
-import WavyImage from "@/components/WavyImage";
 
 export default function Home() {
   return (
