@@ -72,14 +72,14 @@ export default function page() {
             </span>
             <span className="m-16 z-10 hover:scale-[150%] transition-transform cursor-pointer ">
               <MagnetMotion>
-                <div className="p-5 rounded-full bg-[#011627]">
+                <div className="p-5 rounded-full bg-[#011627] cursor-pointer" onClick={scrollDown}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
                     className="size-10 stroke-[#e7f5ff]"
-                    onClick={scrollDown}
+                    
                   >
                     <path
                       strokeLinecap="round"
@@ -105,7 +105,7 @@ export default function page() {
               <Image src={copyright} alt="made w love" width={15} height={15} />
               <span className="absolute right-7 bottom-2 z-10  hover:scale-[150%] transition-transform transform origin-center cursor-pointer">
                 <MagnetMotion>
-                  <div className="p-5 rounded-full bg-[#011627]">
+                  <div className="p-5 rounded-full bg-[#011627] cursor-pointer" onClick={scrollUp}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -113,7 +113,7 @@ export default function page() {
                       strokeWidth="1.5"
                       stroke="currentColor"
                       className="size-10 stroke-[#e7f5ff]"
-                      onClick={scrollUp}
+                      
                     >
                       <path
                         strokeLinecap="round"

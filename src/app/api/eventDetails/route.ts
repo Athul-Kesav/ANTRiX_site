@@ -71,6 +71,18 @@ export function GET(req: NextRequest) {
       desc: "How AI is shaping the future",
       eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
     },
+    { eventId : 11,
+      image: "/test.jpg",
+      title: "AI Innovators Meet'23",
+      desc: "Live stream of the space event. Live stream of the space event.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet.",
+      eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+    },
+    { eventId : 12,
+      image: "/test.jpg",
+      title: "AI Innovators Meet'23",
+      desc: "Live stream of the space event. Live stream of the space event.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet.",
+      eventDate: parse("22/09/2023", "dd/MM/yyyy", new Date()),
+    },
   ];
 
   if (eventId) {
