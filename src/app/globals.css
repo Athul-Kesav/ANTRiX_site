@@ -164,7 +164,7 @@
     bottom: 0;
     width: 0;
     height: 1px; /* Thin underline */
-    background: #e7f5ff; /* Matches text color */
+    background: #FF2323; /* Matches text color */
     transition: width 0.3s ease; /* Smooth transition */
   }
 

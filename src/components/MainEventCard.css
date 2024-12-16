@@ -1,0 +1,23 @@
+.rotate-hover {
+    /* Base rotation */
+  transform: rotate(-90deg);
+
+  /* Hover effects with offset and spring-like behavior */
+  &:hover {
+    transform: rotate(-145deg) scale(2.5);
+    animation: rotateSpring 0.5s ease-in-out;
+  }
+
+  /* Animation for the spring-like effect on mouse leave */
+  @keyframes rotateSpring {
+    0% {
+      transform: rotate(-145deg) scale(2.5);
+    }
+    50% {
+      transform: rotate(-75deg) scale(2.5);
+    }
+    100% {
+      transform: rotate(-135deg) scale(2.5);
+    }
+  }
+}

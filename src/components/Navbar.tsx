@@ -2,6 +2,10 @@
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+
+import MagnetMotion from "@/components/MagnetMotion";
+
+// Import the image
 import img1 from "../svgs/Group49.svg";
 
 function Navbar() {
@@ -29,7 +33,9 @@ function Navbar() {
     <div className="grid h-full w-full left-0 text-[#e7f5ff] grid-rows-4 z-50">
       {/* Top Section with Image */}
       <div className="row-span-1 h-full w-full rounded-lg flex items-start">
+        <MagnetMotion>
         <Image src={img1} alt="Nav Img" className="relative w-20 h-auto hover:w-[5.2rem] transition-all cursor-pointer" onClick={goGame} />
+        </MagnetMotion>
       </div>
 
       {/* Navbar Section */}

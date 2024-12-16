@@ -43,7 +43,7 @@ export default function Home() {
               .recent events
               <button
                 type="button"
-                className=" bg-[#011627] mx-3 my-1 align-middle px-2 rounded-lg inline-flex items-center text-[#E7F5FF] hover:text-[#FF2323] hover:bg-[#E7F5FF]"
+                className=" bg-[#011627] mx-3  py-1  justify-between px-4 rounded-lg inline-flex items-center text-[#E7F5FF] border border-[#011627] hover:text-[#011627] active:bg-[#FF2323] hover:bg-[#E7F5FF] duration-300 ease-out"
               >
                 <a
                   href="/events"
@@ -54,14 +54,14 @@ export default function Home() {
                 <Image
                   src={moreArrow}
                   alt="More Arrow"
-                  width={20}
-                  height={20}
-                  className="mx-1"
+                  width={25}
+                  height={25}
+                  className="mx-1 my-1"
                 />
               </button>
             </div>
-            <div className=" h-full w-full flex items-center align-middle overflow-x-hidden ">
-              {/* <EventHomeCard title="asdasf" desc="adfvdsvsf" eventDate={new Date("2024-12-11")}/> */}
+            <div className=" h-full w-full flex items-start align-middle overflow-x-hidden shadow-[inset_0_4px_10px_#01162730] rounded-xl">
+              <div className="w-[3px] bg-[#011627] h-full ml-0"/>
               <HomeRecentEvents />
             </div>
           </div>

@@ -10,8 +10,9 @@ import { StaticImageData } from "next/image";
 import "./page.css";
 
 import samplePic from "@/images/Hero.jpg";
+import DarkLightToggle from "@/components/DarkLightToggle";
 
-import { ScreenFitText } from "@/components/FitText";
+/* import ImageGrid from "@/components/ImageGrid"; */
 
 interface EventDetails {
   eventId: number;
@@ -22,6 +23,33 @@ interface EventDetails {
 
   // Add other event details properties here
 }
+
+/* const items = [
+  {image: "@/images/spaceImg.jpg",
+    title: "ISRO NSpD'24",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "Gibberish Tech Talk'24",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "Quantum Leap Conference'25",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "XenoSpace Exploration'26",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "AI Innovators Meet'23",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "AI Innovators Meet'23",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "AI Innovators Meet'23",
+  },
+  {image: "@/images/spaceImg.jpg",
+    title: "AI Innovators Meet'23",
+  },
+] */
 
 export default function EventPage({
   params,
@@ -86,8 +114,11 @@ export default function EventPage({
   return (
     <>
       <div className="flex h-full w-full bg-[#e7f5ff] flex-col scrollbar-hide overflow-x-clip relative">
+        <div className="absolute top-5 right-0 z-20 rotate-90">
+          <DarkLightToggle />
+        </div>
         <div
-          className="absolute top-0 w-fit h-fit right-0 transform origin-bottom-right -rotate-90 hover:scale-[105%] z-20 bg-[#011627]/50 backdrop-blur-sm p-3 cursor-pointer flex justify-start items-start rounded-tr-xl rounded-tl-xl border-t-2 border-r-2 border-l-2 border-[#e7f5ff]"
+          className="absolute top-10 w-fit h-fit right-0 transform origin-bottom-right -rotate-90 hover:scale-[105%] z-20 bg-[#011627]/50 backdrop-blur-sm p-3 cursor-pointer flex justify-start items-start rounded-tr-xl rounded-tl-xl border-t-2 border-r-2 border-l-2 border-[#e7f5ff]"
           onClick={() => router.push("/events")}
         >
           <span className="text-xl font-jupiteroid text-[#e7f5ff] leading-none">
@@ -134,9 +165,6 @@ export default function EventPage({
             </div>
             <div className="col-span-1 bg-blue-200 rounded-3xl"></div>
           </div>
-        </div>
-        <div className="h-screen w-full flex flex-col justify-center items-center text-black font-milker relative bg-slate-200">
-          HELLO
         </div>
       </div>
     </>
