@@ -1,52 +1,69 @@
+import "./VelocityText.css";
+import { useRef } from "react";
 import {
-    motion,
-    useScroll,
-    useVelocity,
-    useTransform,
-    useSpring,
-  } from "framer-motion";
-  import React, { useRef } from "react";
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useVelocity,
+  useAnimationFrame,
+} from "framer-motion";
+import { wrap } from "@motionone/utils";
 
-const VelocityText = () => {
-    const targetRef = useRef(null);
-  
-    const { scrollYProgress } = useScroll({
-      target: targetRef,
-      offset: ["start start", "end start"],
-    });
-  
-    const scrollVelocity = useVelocity(scrollYProgress);
-  
-    const skewXRaw = useTransform(
-      scrollVelocity,
-      [-0.5, 0.5],
-      ["45deg", "-45deg"]
-    );
-    const skewX = useSpring(skewXRaw, { mass: 3, stiffness: 400, damping: 50 });
-  
-    const xRaw = useTransform(scrollYProgress, [0, 1], [0, -4000]);
-    const x = useSpring(xRaw, { mass: 3, stiffness: 400, damping: 50 });
-  
-    return (
-      <section
-        ref={targetRef}
-        className="h-[1000vh] bg-neutral-50 text-neutral-950"
-      >
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <motion.p
-            style={{ skewX, x }}
-            className="origin-bottom-left whitespace-nowrap text-5xl font-black uppercase leading-[0.85] md:text-7xl md:leading-[0.85]"
-          >
-            Nothing in this world can take the place of persistence. Talent will
-            not; nothing is more common than unsuccessful men with talent. Genius
-            will not; unrewarded genius is almost a proverb. Education will not;
-            the world is full of educated derelicts. Persistence and determination
-            alone are omnipotent. The slogan 'Press On!' has solved and always
-            will solve the problems of the human race.
-          </motion.p>
-        </div>
-      </section>
-    );
-  };
+interface ParallaxProps {
+  children: string;
+  baseVelocity: number;
+}
 
-  export default VelocityText;
+function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 75,
+    stiffness: 200,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 5000], [0, 10], {
+    clamp: false,
+  });
+
+  // Transform the motion value and wrap it so it loops seamlessly
+  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
+
+  const directionFactor = useRef<number>(1);
+
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 2500);
+
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+    baseX.set(baseX.get() + moveBy);
+  });
+
+  /**
+   * Repeat the text dynamically enough times to avoid abrupt jumps.
+   * For a smooth loop, ensure the text content is duplicated and fills the viewport.
+   */
+  return (
+    <section>
+      <div className="parallax">
+        <motion.div className="scroller text-black font-milker text-9xl" style={{ x }}>
+          {Array(10)
+            .fill(children)
+            .map((item, index) => (
+              <span key={index}>{item}</span>
+            ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export default ParallaxText;

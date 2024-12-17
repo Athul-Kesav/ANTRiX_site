@@ -1,0 +1,16 @@
+.slider-container {
+  .slider {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+
+    @media only screen and (max-width: 375px) {
+      height: 400px;
+      width: 100%;
+    }
+
+  }
+
+}
+
