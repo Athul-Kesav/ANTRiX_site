@@ -53,8 +53,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    */
   return (
     <section>
-      <div className="parallax">
-        <motion.div className="scroller text-black font-milker text-9xl" style={{ x }}>
+      <div className="parallax text-accent">
+        <motion.div className="scroller font-milker text-9xl" style={{ x }}>
           {Array(10)
             .fill(children)
             .map((item, index) => (

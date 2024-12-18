@@ -45,7 +45,7 @@ export default function DYK_Bar() {
   return (
     <div className="relative h-full w-full rounded-xl">
       <div
-        className="flex space-x-4 overflow-x-auto bg-[#011627] scrollbar-hide rounded-xl justify-between px-2 items-center align-middle"
+        className="flex space-x-4 overflow-x-auto bg-accent scrollbar-hide rounded-xl justify-between px-2 items-center align-middle"
         style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }} // Ensures no wrapping
       >
         {items.map((item, index) => (
@@ -55,10 +55,10 @@ export default function DYK_Bar() {
             <DYK_Card img={item.img} desc={item.desc} refer={item.refer} />
           </div>
         ))}
-        <div className="-rotate-90">
+        {/* <div className="-rotate-90">
           <button
             type="button"
-            className="bg-[#011627] my-1 align-middle px-4 rounded-lg inline-flex items-center text-[#E7F5FF] hover:text-[#FF2323] hover:bg-[#E7F5FF]"
+            className="bg-accent my-1 align-middle px-4 rounded-lg inline-flex items-center text-[#E7F5FF] hover:text-[#FF2323] hover:bg-[#E7F5FF]"
             
           >
             <a href="/dyk" className="font-moonRising text-lg transition-all">
@@ -72,7 +72,7 @@ export default function DYK_Bar() {
               className="mx-1"
             />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -25,8 +25,13 @@ export default function () {
           </div>
           <div className="col-span-9 row-span-1 text-[#011627] flex flex-col  z-0">
             <div
-              className="glitch text-9xl font-milker tracking-tighter leading-[5.5rem]"
+              className="glitch text-9xl font-milker tracking-tighter leading-[5.5rem] text-nowrap"
               title="KNOCK KNOCK !"
+              style={{
+                fontSize: "clamp(2rem, 9vw, 15rem)", // Minimum 2rem, scales up to 10rem
+                lineHeight: "clamp(3rem,7vw, 9rem)",
+                transition: "all 0.3s ease-in-out",
+              }}
             >
               KNOCK KNOCK !
             </div>
@@ -35,12 +40,12 @@ export default function () {
             </div>
           </div>
           <div className="col-span-9 grid grid-cols-2 gap-3 row-span-3 justify-start items-start z-0">
-            <div className="col-span-1 h-full w-full p-5 rounded-xl bg-[#011627] text-[#e7f5ff] relative ">
+            <div className="col-span-1 h-full w-full p-5 rounded-xl bg-[#011627] text-[#e7f5ff] relative overflow-clip">
               <Image
                 src={contactUsBg}
                 alt="Contact Us"
                 layout="fill"
-                className="absolute opacity-50 h-full w-full rounded-xl object-cover mix-blend-lighten pointer-events-none"
+                className="absolute opacity-50 h-full w-full rounded-xl object-cover mix-blend-lighten pointer-events-none scale-110"
                 objectPosition="top"
               />
               <div className="w-full h-full flex flex-col">

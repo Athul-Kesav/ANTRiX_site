@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -23,7 +22,6 @@
 ::-webkit-scrollbar-track {
   background-color: #e7f5ff;
 }
-
 
 @font-face {
   font-family: "SuiGeneris";
@@ -62,7 +60,6 @@
   src: url("../fonts/mixedfeelings.ttf") format("ttf");
 }
 
-
 @keyframes shine {
   0% {
     background-position: -200%;
@@ -93,6 +90,8 @@
 
 @layer base {
   :root {
+    --MainColor: #e7f5ff;
+    --AccentColor: #011627;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -120,6 +119,8 @@
     --radius: 0.5rem;
   }
   .dark {
+    --MainColor: #011627;
+    --AccentColor: #e7f5ff;
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -147,8 +148,6 @@
   }
 }
 
-
-
 @layer utilities {
   .nav-item {
     position: relative;
@@ -158,13 +157,13 @@
   }
 
   .nav-item::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 0;
     height: 1px; /* Thin underline */
-    background: #FF2323; /* Matches text color */
+    background: #ff2323; /* Matches text color */
     transition: width 0.3s ease; /* Smooth transition */
   }
 
@@ -172,4 +171,3 @@
     width: 100%; /* Expand underline */
   }
 }
-

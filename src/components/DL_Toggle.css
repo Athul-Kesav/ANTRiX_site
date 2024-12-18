@@ -38,7 +38,7 @@
     border-radius: 50%;
     left: 10%;
     bottom: 15%;
-    box-shadow: inset 8px -4px 0px 0px #000000;
+    box-shadow: inset 8px -4px 0px 0px #e7f5ff;
     background: var(--background);
     transition: 1s;
   }

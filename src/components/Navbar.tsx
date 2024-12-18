@@ -30,7 +30,7 @@ function Navbar() {
   const filteredLinks = navLinks.filter((link) => link.href !== pathname);
 
   return (
-    <div className="grid h-full w-full left-0 text-[#e7f5ff] grid-rows-4 z-50">
+    <div className="grid h-full w-full left-0 text-main grid-rows-4 z-50">
       {/* Top Section with Image */}
       <div className="row-span-1 h-full w-full rounded-lg flex items-start">
         <MagnetMotion>
@@ -40,8 +40,8 @@ function Navbar() {
 
       {/* Navbar Section */}
       <div className="w-[4.6rem] h-full relative row-span-3">
-        <div className="w-full h-full absolute bg-[#011627] rounded-lg" />
-        <div className="w-full h-full absolute flex-col justify-around items-center inline-flex text-2xl text-[#e7f5ff] font-thin font-jupiteroid text-nowrap">
+        <div className="w-full h-full absolute bg-accent rounded-lg" />
+        <div className="w-full h-full absolute flex-col justify-around items-center inline-flex text-2xl text-main font-thin font-jupiteroid text-nowrap">
           {filteredLinks.map((link) => (
             <div
               key={link.name}
