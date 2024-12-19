@@ -2,14 +2,12 @@
 
 import "./page.css";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 
 import Navbar from "@/components/Navbar";
 import HorizontalScrollCarousel from "@/components/HorizontalScroll";
 
 import spaceImg from "@/images/spaceImg.jpg";
-import noise from "@/images/noiseTex.png";
-import copyright from "@/svgs/Group51.svg";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MagnetMotion from "@/components/MagnetMotion";
@@ -23,7 +21,7 @@ interface eventCard {
   eventDate: Date;
 }
 
-export default function page() {
+function EventPage() {
   const [items, setItems] = useState<eventCard[]>([]); // State to store the fetched items
 
   // Fetch data from the backend
@@ -132,3 +130,5 @@ export default function page() {
     </div>
   );
 }
+
+export default EventPage;

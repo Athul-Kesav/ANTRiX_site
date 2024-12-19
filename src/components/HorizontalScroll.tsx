@@ -2,7 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 
-import wnext from "@/images/Wnext.svg";
+
 import spaceShip from "@/images/spaceShip.jpg";
 import eventsImg from "@/images/eventsImg.jpg";
 import MainEventCard from "./MainEventCard";

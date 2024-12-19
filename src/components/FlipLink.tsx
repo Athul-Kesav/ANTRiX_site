@@ -10,7 +10,7 @@ const DURATION = 0.25;
         initial="initial"
         whileHover="hovered"
         href={href}
-        className={`relative block overflow-hidden whitespace-nowrap text-xl font-${font}  sm:text-5xl md:text-6xl lg:text-${fontSize} text-[#011627]`}
+        className={`relative block overflow-hidden whitespace-nowrap text-xl font-${font}  sm:text-5xl md:text-6xl lg:text-${fontSize} text-accent`}
         style={{
           lineHeight: 0.75,
         }}

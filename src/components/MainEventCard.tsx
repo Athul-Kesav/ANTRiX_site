@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import { format } from "date-fns";
 import { useEffect } from "react";
 
-export default function (eventCard: {
+function MainEventCard (eventCard: {
   eventId: number;
   image: string | StaticImageData;
   title: string;
@@ -80,3 +80,4 @@ export default function (eventCard: {
     </>
   );
 }
+export default MainEventCard;

@@ -3,23 +3,19 @@
 import DYK_Bar from "@/components/DYK_Bar";
 import Navbar from "@/components/Navbar";
 import HeroImage from "@/images/Hero.jpg";
-import moreArrow from "@/svgs/Line9.svg";
-import copyright from "@/svgs/Group51.svg";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Link from "next/link";
 
 import HomeRecentEvents from "@/components/HomeRecentEvents";
 import DarkLightToggle from "@/components/DarkLightToggle";
 
 export default function Home() {
-  const [theme, setTheme] = useState("light");
-
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
-      setTheme("dark");
     }
   }, []);
 
@@ -57,15 +53,15 @@ export default function Home() {
                 type="button"
                 className=" bg-accent mx-3 w-fit py-1  justify-between px-7  rounded-lg inline-flex items-center text-main border border-accent hover:text-accent active:bg-[#FF2323] hover:bg-main duration-300 ease-out"
               >
-                <a
+                <Link
                   href="/events"
                   className="font-moonRising text-xs transition-all"
                 >
                   MORE
-                </a>
+                </Link>
               </button>
             </div>
-            <div className=" h-full w-full flex items-start align-middle overflow-x-hidden shadow-[inset_0_4px_10px_#01162730] rounded-xl border border-accent">
+            <div className=" h-full w-full flex items-start align-middle overflow-x-hidden shadow-[inset_0_4px_10px_#01162730] rounded-e-xl">
               <div className="w-[3px] bg-accent h-full ml-0" />
               <HomeRecentEvents />
             </div>
@@ -86,7 +82,7 @@ export default function Home() {
             </div>
             <div className="flex-col align-bottom text-accent">
               <span className="font-moonRising text-2xl ">
-                “The cosmos is within us. We are made of star-stuff."
+                &quot;The cosmos is within us. We are made of star-stuff.&quot;
               </span>
               <span className="font-mixedFeelings text-2xl inline-flex">
                 ~ Carl Sagan

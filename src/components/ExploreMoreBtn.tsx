@@ -1,6 +1,6 @@
 "use client";
-import arrow from "../svgs/Group32.svg";
-import Image from "next/image";
+
+
 import { useRouter } from "next/navigation";
 
 interface expBtnType {

@@ -4,9 +4,6 @@ import DYK_Card from "./DYK_Card";
 import axios from "axios";
 import { StaticImageData } from "next/image";
 import DYKLoader from "./DYKLoader";
-import Image from "next/image";
-import moreArrow from "../svgs/Line9.svg";
-import router from "next/navigation";
 
 interface DYKItem {
   img: string | StaticImageData; // URL of the image

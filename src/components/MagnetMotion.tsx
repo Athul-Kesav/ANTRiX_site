@@ -7,11 +7,6 @@ export default function Framer({ children }: { children: ReactNode }) {
     const ref = useRef<HTMLDivElement>(null);
     const [position, setPosition] = useState({x:0,y:0});
 
-    interface MouseEventProps {
-      clientX: number;
-      clientY: number;
-    }
-
     const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
       const { clientX, clientY } = e;
       if (!ref.current) return;

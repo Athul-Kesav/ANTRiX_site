@@ -2,7 +2,7 @@ import MagGrid from "@/components/MagGrid";
 
 
 
-export default function () {
+function GamePage() {
     return (
         <>
             <div className="h-screen w-screen flex flex-col items-center justify-center font-milker text-7xl">
@@ -12,3 +12,5 @@ export default function () {
         </>
     )
 }
+
+export default GamePage;

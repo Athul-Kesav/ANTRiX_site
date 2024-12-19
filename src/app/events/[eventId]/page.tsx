@@ -28,7 +28,7 @@ interface EventDetails {
 }
 
 
-export default function EventPage({
+function EachEventPage({
   params,
 }: {
   params: Promise<{ eventId: string }>;
@@ -45,13 +45,12 @@ export default function EventPage({
         const { eventId } = await params;
         setEventId(eventId);
       } catch (error) {
-        //console.error("Failed to get event ID:", error);
-        //notFound(); // Render 404 page if event ID is not found or an error occurs
+        console.log("Failed to fetch event ID:", error);
       }
     }
 
     fetchEventId();
-  }, []);
+  });
 
   useEffect(() => {
     if (eventId) {
@@ -164,3 +163,6 @@ export default function EventPage({
     </>
   );
 }
+
+
+export default EachEventPage;

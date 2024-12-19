@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence, PanInfo } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "@motionone/utils";
+import Image from "next/image";
 
 import "./ImageSlider.css";
 
@@ -10,39 +11,25 @@ const sliderVariants = {
   incoming: (direction: number) => ({
     x: direction > 0 ? "100%" : "-100%",
     scale: 1.2,
-    opacity: 0
+    opacity: 0,
   }),
   active: { x: 0, scale: 1, opacity: 1 },
   exit: (direction: number) => ({
     x: direction > 0 ? "-100%" : "100%",
     scale: 1,
-    opacity: 0.2
-  })
+    opacity: 0.2,
+  }),
 };
 
 const sliderTransition = {
   duration: 1,
-  ease: [0.56, 0.03, 0.12, 1.04]
+  ease: [0.56, 0.03, 0.12, 1.04],
 };
 
 const App = () => {
   const [[imageCount, direction], setImageCount] = useState([0, 0]);
 
   const activeImageIndex = wrap(0, IMAGES.length, imageCount);
-
-  const swipeToImage = (swipeDirection: number) => {
-    setImageCount([imageCount + swipeDirection, swipeDirection]);
-  };
-
-  const dragEndHandler = (dragInfo: PanInfo) => {
-    const draggedDistance = dragInfo.offset.x;
-    const swipeThreshold = 50;
-    if (draggedDistance > swipeThreshold) {
-      swipeToImage(-1);
-    } else if (draggedDistance < -swipeThreshold) {
-      swipeToImage(1);
-    }
-  };
 
   const skipToImage = (imageId: number) => {
     let changeDirection = 0;
@@ -64,7 +51,7 @@ const App = () => {
               className="image w-full h-full bg-cover bg-center pointer-events-none rounded-none object-cover absolute cursor-default"
               style={{
                 backgroundImage: `url(${IMAGES[activeImageIndex].imageSrc})`,
-                backgroundPosition: "top"
+                backgroundPosition: "top",
               }}
               custom={direction}
               variants={sliderVariants}
@@ -78,13 +65,20 @@ const App = () => {
       </div>
 
       <div className="thumbnails flex justify-center gap-2">
-        {IMAGES.map(image => (
+        {IMAGES.map((image) => (
           <div
             key={image.id}
             onClick={() => skipToImage(image.id)}
             className="thumbnail-container relative h-36 w-full cursor-pointer rounded-lg overflow-hidden"
           >
-            <img src={image.imageSrc} alt="Musician" className="h-full w-full object-cover" />
+            <Image
+              src={image.imageSrc}
+              alt="Musician"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              className="h-full w-full object-cover"
+            />
             <div
               className={`rounded-lg inset-0 active-indicator absolute top-0 left-0 h-full w-full transform scale-x-0 origin-left bg-[#01162775] transition-transform duration-1000 ease-[0.56, 0.03, 0.12, 1.04] ${
                 image.id === activeImageIndex ? "scale-x-100" : ""

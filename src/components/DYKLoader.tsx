@@ -2,7 +2,6 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 
 const DYKLoader = () => {
-    const array = new Array(5).fill(0);
   
     return (
       <Skeleton className="relative h-full w-full rounded-xl">
