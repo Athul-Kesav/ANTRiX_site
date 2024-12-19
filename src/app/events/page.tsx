@@ -61,24 +61,24 @@ export default function page() {
       </div>
       <div className="h-screen ">
         <div className="grid grid-cols-10 grid-rows-4 h-full gap-1">
-          <div className="col-span-full row-span-4 h-screen w-full bg-[#E7F5FF] flex breathe-animation relative overflow-clip">
+          <div className="col-span-full row-span-4 h-screen w-full bg-main flex breathe-animation relative overflow-clip">
             <Image
               src={spaceImg}
               alt="space Image"
               className="absolute z-0 object-cover h-full w-full mix-blend-difference"
             />
-            <span className="z-20 absolute bottom-0 right-0 leading-0 tracking-tighter bg-[#e7f5ff] text-[#011627] px-16 effectText rounded-tl-2xl">
+            <span className="z-20 absolute bottom-0 right-0 leading-0 tracking-tighter bg-main text-[#011627] px-16 effectText rounded-tl-2xl">
               EVENTS
             </span>
-            <span className="m-16 z-10 hover:scale-[150%] transition-transform cursor-pointer ">
+            <span className="m-16 z-10 hover:scale-125 transition-transform cursor-pointer ">
               <MagnetMotion>
-                <div className="p-5 rounded-full bg-[#011627] cursor-pointer" onClick={scrollDown}>
+                <div className="p-5 rounded-full bg-accent cursor-pointer" onClick={scrollDown}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="size-10 stroke-[#e7f5ff]"
+                    className="size-10 stroke-red-500"
                     
                   >
                     <path
@@ -97,22 +97,23 @@ export default function page() {
           {/* <div className="col-span-9 row-span-2 h-full w-full bg-black"></div> */}
         </div>
         <div className=" h-screen relative">
-          <div className="absolute top-0 left-0 w-[10vw] h-[500vh] bg-gradient-to-r from-[#011627] via-[#e7f5ff15] to-transparent z-50" />
+          <div className="absolute top-0 left-0 w-[10vw] h-[500vh] bg-gradient-to-r from-main via-transparent to-transparent z-50" />
           <HorizontalScrollCarousel eventCards={items} />
-          <h1 className="text-9xl absolute right-0 text-right uppercase font-milker leading-0 text-[#011627] h-screen bg-[#E7F5FF]">
+          <h1 className="text-9xl absolute right-0 text-right uppercase font-milker leading-0 text-accent h-screen bg-main">
             More EVENTS Coming Soon
-            <div className="absolute bottom-11 right-1 z-[70] bg-[#E7F5FF] p-2 rounded-lg">
-              <Image src={copyright} alt="made w love" width={15} height={15} />
-              <span className="absolute right-7 bottom-2 z-10  hover:scale-[150%] transition-transform transform origin-center cursor-pointer">
+            <div className="absolute bottom-0 right-1 z-[70] bg-main p-2 rounded-lg">
+              <span className="font-jupiteroid text-lg text-accent bottom-0">Made with ❤️ by Team Antrix</span>
+              
+              <span className="absolute right-7  bottom-11 z-10  hover:scale-125 transition-transform transform origin-center cursor-pointer">
                 <MagnetMotion>
-                  <div className="p-5 rounded-full bg-[#011627] cursor-pointer" onClick={scrollUp}>
+                  <div className="p-5 rounded-full bg-accent cursor-pointer" onClick={scrollUp}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className="size-10 stroke-[#e7f5ff]"
+                      className="size-10 stroke-red-500"
                       
                     >
                       <path

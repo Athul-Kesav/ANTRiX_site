@@ -35,15 +35,15 @@ export default function (eventCard: {
   return (
     <>
       
-        <div className="grid grid-rows-7 h-screen w-[50vw] relative z-0 overflow-clip border border-[#011627] group cursor-pointer" onClick={() => goToEvent({ url: `/events/${eventCard.eventId}` })}>
-          <div className="absolute top-5 right-5 flex z-10 rounded-full bg-[#e7f5ff] p-7 -rotate-90 group-hover:-rotate-[135deg] group-hover:scale-[250%] transition-transform duration-500 overflow-clip">
+        <div className="grid grid-rows-7 h-screen w-[50vw] relative z-0 overflow-clip border border-accent group cursor-pointer" onClick={() => goToEvent({ url: `/events/${eventCard.eventId}` })}>
+          <div className="border-2 border-accent absolute top-5 right-5 flex z-10 rounded-full bg-main p-7 -rotate-90 group-hover:-rotate-[135deg] group-hover:scale-[250%] transition-transform duration-500 overflow-clip">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="current"
-              className="size-10 z-10 stroke-[#011627]"
+              className="size-10 z-10 stroke-accent"
             >
               <path
                 strokeLinecap="round"
@@ -65,7 +65,7 @@ export default function (eventCard: {
               className="overflow-hidden transition-transform duration-500 scale-110 transform group-hover:scale-100 "
             />
           </div>
-          <div className="row-span-2  bg-[#e7f5ff] relative flex flex-col justify-start text-[#011627] p-7">
+          <div className="row-span-2  bg-main relative flex flex-col justify-start text-accent p-7">
             <span className="font-suiGeneris font-black text-4xl text-wrap">
               {eventCard.title}
             </span>

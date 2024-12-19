@@ -1,6 +1,5 @@
 "use client";
 
-
 import DYK_Bar from "@/components/DYK_Bar";
 import Navbar from "@/components/Navbar";
 import HeroImage from "@/images/Hero.jpg";
@@ -8,20 +7,21 @@ import moreArrow from "@/svgs/Line9.svg";
 import copyright from "@/svgs/Group51.svg";
 
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import HomeRecentEvents from "@/components/HomeRecentEvents";
 import DarkLightToggle from "@/components/DarkLightToggle";
 
 export default function Home() {
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      setTheme("dark");
     }
   }, []);
-
 
   return (
     <>
@@ -66,7 +66,7 @@ export default function Home() {
               </button>
             </div>
             <div className=" h-full w-full flex items-start align-middle overflow-x-hidden shadow-[inset_0_4px_10px_#01162730] rounded-xl border border-accent">
-              <div className="w-[3px] bg-accent h-full ml-0"/>
+              <div className="w-[3px] bg-accent h-full ml-0" />
               <HomeRecentEvents />
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
               layout="fill" /* Makes the image fill the parent div */
               objectFit="cover" /* Ensures the image covers the div without distortion */
               objectPosition="center"
-              className="rounded-2xl" /* Optional: Add rounded corners or other styles */
+              className={`rounded-2xl  brightness-75 contrast-125`} /* Optional: Add rounded corners or other styles */
             />
           </div>
           <div className="flex-col col-span-2 row-span-1 z-10 items-end">
@@ -94,8 +94,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-12 right-1">
-          <Image src={copyright} alt="made w love" width={15} height={15} />
+        <div className="absolute bottom-3 right-0 transform origin-left">
+          <span className="font-jupiteroid text-lg text-accent p-3">
+            Made with ❤️ by Team Antrix
+          </span>
         </div>
       </div>
     </>
