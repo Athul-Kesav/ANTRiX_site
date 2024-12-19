@@ -14,7 +14,7 @@ export function GET(req: NextRequest) {
       image: "/Event1.webp",
       title: "ISRO NSpD'24",
       
-      desc: "Live stream of the space event. Live stream of the space event.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet.",
+      desc: "Live stream of the space event. Live stream of the space event.. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente hic ipsa obcaecati dignissimos. Nisi illum hic tempora facilis. Vel deserunt repellat nulla mollitia inventore quae, aperiam voluptatum laboriosam quas eveniet.",
       eventDate: parse("03/12/2024", "dd/MM/yyyy", new Date()),
     },
     { eventId : 2,
