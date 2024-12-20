@@ -14,6 +14,7 @@ import samplePic from "@/images/Hero.jpg";
 import DarkLightToggle from "@/components/DarkLightToggle";
 import VelocityText from "@/components/VelocityText";
 import ImageSlider from "@/components/ImageSlider";
+import LoadingScreen from "@/app/loading";
 
 /* import ImageGrid from "@/components/ImageGrid"; */
 
@@ -72,15 +73,13 @@ function EachEventPage({
 
   if (eventId === null) {
     return (
-      <div className="h-screen w-screen items-center flex justify-center font-montserrat text-3xl font-medium bg-[#e7f5ff]">
-        Loading...
-      </div>
+      <LoadingScreen />
     ); // Display a loading state while waiting for the event ID
   }
 
   if (eventId !== null) {
     if (eventDetails === null) {
-      return; // Display a loading state while waiting for the event details
+      <LoadingScreen />
     }
   }
 

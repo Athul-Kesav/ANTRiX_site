@@ -14,7 +14,7 @@ function EventHomeCard({ title, desc, eventDate }: eventCardType) {
       <div className="my-2 py-6 px-2 w-auto text-accent h-auto relative rounded-bl-md rounded-r-md border-l-2 border-l-accent  bg-main z-0 bg-gradient-to-br from-transparent via-[#d0e4f222] to-[#8396a3] shadow-lg">
         <div className="absolute rounded-full w-3 h-[3px] bg-accent top-0 -left-3"   />
         <div className="left-0 top-0 leading-tight">
-          <div className=" text-lg font-normal font-suiGeneris leading-tight text-wrap flex md:text-md">
+          <div className=" text-lg font-normal font-suiGeneris text-left leading-tight text-wrap flex md:text-md">
             {title}
             <br />
           </div>

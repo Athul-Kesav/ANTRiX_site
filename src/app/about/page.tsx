@@ -45,7 +45,7 @@ function AboutPage() {
               </FlipLink>
             </div>
 
-            <div className="col-span-9 lg:col-span-6 row-span-2  border border-accent rounded-lg p-5 text-accent">
+            <div className="col-span-9 lg:col-span-6 row-span-2 rounded-lg text-accent">
               <p className="font-montserrat text-xl text-justify">
                 We are a group of passionate and enthusiastic college students
                 driven by an insatiable curiosity to explore the universe and
@@ -54,7 +54,7 @@ function AboutPage() {
                 that dreams, discovers, and grows together.
                 <br />
                 <br />
-                <span className="font-jupiteroid text-xl font-bold">
+                <span className="font-jupiteroid text-3xl font-thin">
                   &quot;The universe is a canvas, and curiosity is the brush that
                   paints our understanding.&quot;
                 </span>

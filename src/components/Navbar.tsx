@@ -41,11 +41,11 @@ function Navbar() {
       {/* Navbar Section */}
       <div className="w-[4.6rem] h-full relative row-span-3">
         <div className="w-full h-full absolute bg-accent rounded-lg" />
-        <div className="w-full h-full absolute flex-col justify-around items-center inline-flex text-2xl text-main font-thin font-jupiteroid text-nowrap">
+        <div className="w-full h-full  flex-col justify-around items-center inline-flex text-2xl text-main font-thin font-jupiteroid text-nowrap">
           {filteredLinks.map((link) => (
             <div
               key={link.name}
-              className="nav-item -rotate-90 cursor-pointer"
+              className="nav-item -rotate-90 cursor-pointer "
             >
               <a href={link.href}>{link.name}</a>
             </div>
