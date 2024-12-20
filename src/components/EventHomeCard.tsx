@@ -11,10 +11,10 @@ function EventHomeCard({ title, desc, eventDate }: eventCardType) {
 
   return (
     <>
-      <div className="my-2 py-4 px-2 w-auto text-accent h-auto relative rounded-sm border-l-2 border-l-accent  bg-main z-0 bg-gradient-to-br from-transparent via-[#D0E4F250] to-[#8396a3]">
-        <div className="absolute rounded-full w-3 h-[3px] bg-accent top-1/2 -left-3" />
+      <div className="my-2 py-6 px-2 w-auto text-accent h-auto relative rounded-bl-md rounded-r-md border-l-2 border-l-accent  bg-main z-0 bg-gradient-to-br from-transparent via-[#d0e4f222] to-[#8396a3] shadow-lg">
+        <div className="absolute rounded-full w-3 h-[3px] bg-accent top-0 -left-3"   />
         <div className="left-0 top-0 leading-tight">
-          <div className=" text-xs font-normal font-suiGeneris leading-tight text-wrap flex md:text-md">
+          <div className=" text-lg font-normal font-suiGeneris leading-tight text-wrap flex md:text-md">
             {title}
             <br />
           </div>

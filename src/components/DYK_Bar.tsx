@@ -42,7 +42,7 @@ export default function DYK_Bar() {
   return (
     <div className="relative h-full w-full rounded-xl">
       <div
-        className="flex space-x-4 overflow-x-auto bg-accent scrollbar-hide rounded-xl justify-between px-2 items-center align-middle"
+        className="flex space-x-2 overflow-x-auto bg-accent scrollbar-hide rounded-xl justify-between px-2 items-center align-middle"
         style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }} // Ensures no wrapping
       >
         {items.map((item, index) => (
