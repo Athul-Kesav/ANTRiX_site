@@ -33,8 +33,15 @@ export default function Home() {
             </div>
 
             {/* Second Sidebar */}
-            <div className="col-span-2  flex justify-center items-center z-0">
-              <div className="text-[173px] font-bold font-milker tracking-wide transform -rotate-90 text-center text-accent">
+            <div className="hidden lg:col-span-2  lg:flex justify-center items-center z-0 ">
+              <div
+                className="text-[173px] font-bold font-milker tracking-wide transform -rotate-90 text-center text-accent"
+                style={{
+                  fontSize: "clamp(2rem, 10.5vw, 12rem)", // Minimum 2rem, scales up to 10rem
+                  lineHeight: "clamp(3rem, 8.5vw, 9rem)",
+                  transition: "all 0.3s ease-in-out",
+                }}
+              >
                 ANTR{<span className="font-yesevaOne">i</span>}X
               </div>
             </div>
@@ -81,7 +88,7 @@ export default function Home() {
               National Institute of Technology
             </div>
             <div className="flex-col align-bottom text-accent">
-              <span className="font-moonRising text-2xl ">
+              <span className="font-moonRising text-xl  lg:text-2xl">
                 &quot;The cosmos is within us. We are made of star-stuff.&quot;
               </span>
               <span className="font-mixedFeelings text-2xl inline-flex">

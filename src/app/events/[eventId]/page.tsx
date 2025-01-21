@@ -90,20 +90,20 @@ function EachEventPage({
     : "";
   return (
     <>
-      <div className="flex h-full w-full bg-[#e7f5ff] flex-col scrollbar-hide overflow-x-clip relative">
+      <div className="flex h-full w-full bg-main flex-col scrollbar-hide overflow-x-clip relative">
         <div className="absolute top-5 right-0 z-20 rotate-90">
           <DarkLightToggle />
         </div>
         <div
-          className="absolute top-10 w-fit h-fit right-0 transform origin-bottom-right -rotate-90 hover:scale-[105%] z-20 bg-[#011627]/50 backdrop-blur-sm p-3 cursor-pointer flex justify-start items-start rounded-tr-xl rounded-tl-xl border-t-2 border-r-2 border-l-2 border-[#e7f5ff]"
+          className="absolute top-10 w-fit h-fit right-0 transform origin-bottom-right -rotate-90 hover:scale-[105%] z-20 bg-accent/50 backdrop-blur-sm p-3 cursor-pointer flex justify-start items-start rounded-tr-xl rounded-tl-xl border-t-2 border-r-2 border-l-2 border-main"
           onClick={() => router.push("/events")}
         >
-          <span className="text-xl font-jupiteroid text-[#e7f5ff] leading-none">
+          <span className="text-xl font-jupiteroid text-main leading-none">
             Back to Events
           </span>
         </div>
 
-        <div className="h-screen w-full flex flex-col-reverse justify-start text-left items-center text-black  font-milker relative  ">
+        <div className="h-screen w-full flex flex-col-reverse justify-start text-left items-center text-accent  font-milker relative  ">
           <div className="absolute inset-0  z-0">
             <Image
               src={eventDetails?.image || samplePic}
@@ -116,7 +116,7 @@ function EachEventPage({
 
           <div className="relative">
             <motion.span
-              className="titleText z-10 text-[#e7f5ff] mix-blend-difference text-center flex mb-16"
+              className="titleText z-10 text-main mix-blend-difference text-center flex mb-16"
               style={{
                 fontSize: "clamp(2rem, 10vw, 10rem)", // Minimum 2rem, scales up to 10rem
                 lineHeight: "clamp(3rem, 8.5vw, 9rem)",
@@ -138,9 +138,9 @@ function EachEventPage({
 
         <VelocityText baseVelocity={-5}>event</VelocityText>
 
-        <div className="h-screen  bg-[#e7f5ff] w-full p-20 flex flex-col justify-center items-center text-[#011627] font-milker relative">
+        <div className="h-screen  bg-main w-full p-20 flex flex-col justify-center items-center text-accent font-milker relative">
           <div className="grid grid-cols-3 gap-7 h-full w-full relative">
-            <div className="col-span-1  grid grid-rows-3 w-full text-[#011627]">
+            <div className="col-span-1  grid grid-rows-3 w-full text-accent">
               <div className="row-span-1  w-full flex flex-col justify-center">
                 <span className="text-8xl font-montserrat font-black uppercase text-wrap leading-[4.7rem]">Event Recap</span>
                 <span className="text-xl font-mono">{formattedDate}</span>

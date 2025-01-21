@@ -1,6 +1,6 @@
+import { NextConfig } from "next";
 
-import type { NextConfig } from "next";
-
+// next.config.ts
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  middleware: true,
 };
 
 export default nextConfig;
