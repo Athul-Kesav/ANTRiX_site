@@ -35,7 +35,7 @@ function ContactPage () {
             >
               KNOCK KNOCK !
             </div>
-            <div className="text-5xl my-7 font-suiGeneris lowercase">
+            <div className="text-5xl my-2 font-suiGeneris lowercase">
               We&apos;re All Ears
             </div>
           </div>
