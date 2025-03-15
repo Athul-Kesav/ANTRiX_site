@@ -53,7 +53,8 @@ function EventPage() {
   }
 
   return (
-    <div className="h-fit relative scrollbar-hide">
+    <>
+    <div className="h-fit relative scrollbar-hide hidden lg:block">
       <div className="absolute top-5 right-0 z-20 rotate-90">
         <DarkLightToggle />
       </div>
@@ -128,6 +129,14 @@ function EventPage() {
         </div>
       </div>
     </div>
+    <div className="h-screen w-screen flex-col items-center justify-center bg-main p-[45px] flex lg:hidden">
+        <h1 className="font-montserrat text-xl sm:text-2xl md:text-3xl text-accent">
+          The mobile version of the site is still under development.
+          <br />
+          Please visit the site on a desktop for the best experience.
+        </h1>
+      </div>
+    </>
   );
 }
 

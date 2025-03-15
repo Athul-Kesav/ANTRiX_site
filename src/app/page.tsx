@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-screen box-border bg-main p-[45px] relative">
+      <div className="h-screen box-border bg-main p-[45px] relative hidden lg:flex">
         <div className="absolute top-5 right-0 z-20 rotate-90">
           <DarkLightToggle />
         </div>
@@ -87,8 +87,9 @@ export default function Home() {
             <div className="bg-accent h-auto w-full text-main items-center flex justify-center font-montserrat leading-tight rounded-md mt-10 mb-4 text-center text-sm py-2">
               National Institute of Technology
             </div>
-            <div className="flex-col align-bottom text-accent">
-              <span className="font-moonRising text-xl  lg:text-2xl">
+            <div className="flex-col align-bottom text-accent items-center flex justify-center font-montserrat leading-tight rounded-md text-center text-sm py-2">
+              <span className="font-moonRising text-[1.5rem] inline-flex"
+              >
                 &quot;The cosmos is within us. We are made of star-stuff.&quot;
               </span>
               <span className="font-mixedFeelings text-2xl inline-flex">
@@ -102,6 +103,12 @@ export default function Home() {
             Made with ❤️ by Team Antrix
           </span>
         </div>
+      </div>
+      <div className="h-screen w-screen flex-col items-center justify-center bg-main p-[45px] flex lg:hidden">
+          <h1 className="font-montserrat text-xl sm:text-2xl md:text-3xl text-accent">
+                The mobile version of the site is still under development.<br/>
+                Please visit the site on a desktop for the best experience.
+          </h1>
       </div>
     </>
   );
